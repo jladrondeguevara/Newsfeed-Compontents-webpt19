@@ -121,9 +121,14 @@ const articleMaker = (titleIn, dateIn, par1In, par2In, par3In) => {
   const par3 = document.createElement('p');
   const expandBtn = document.createElement('span');
 
+  title.textContent = titleIn;
+  date.textContent = dateIn;
+  par1.textContent = par1In;
+  par2.textContent = par2In;
+  par3.textContent = par3In;
+
   article.classList.add('article');
   date.classList.add('date');
-
 
   article.appendChild(title);
   article.appendChild(date);
@@ -131,6 +136,8 @@ const articleMaker = (titleIn, dateIn, par1In, par2In, par3In) => {
   article.appendChild(par2);
   article.appendChild(par3);
   article.appendChild(expandBtn);
+
+  
 
   expandBtn.addEventListener('click', () => {
     console.log("button clicked");
