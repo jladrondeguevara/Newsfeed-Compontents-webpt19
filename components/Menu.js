@@ -33,7 +33,7 @@ let menuItems = [
 */
 
 
-const menuMaker = (item) => {
+const menuMaker = (items) => {
   const menu = document.createElement('div');
   const list = document.createElement('ul');
   // const item = document.createElement('il');
@@ -42,9 +42,10 @@ const menuMaker = (item) => {
 
   menu.appendChild(list);
 
-  menuItems.forEach(data => {
-    const item = createElement('li');
+  items.forEach(data => {
+    const item = document.createElement('li');
     item.textContent = data;
+    console.log("this is the li", item);
     list.appendChild(item);
   })
 
@@ -55,3 +56,7 @@ const menuMaker = (item) => {
   })
   return menu;
 }
+
+
+const header = document.querySelector(".header");
+header.appendChild(menuMaker(menuItems));
