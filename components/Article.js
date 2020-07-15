@@ -120,6 +120,11 @@ const articleMaker = () =>{
   const par2 = document.createElement('p');
   const par3 = document.createElement('p');
 
+  article.appendChild(title);
+  article.appendChild(date);
+  article.appendChild(par1);
+  article.appendChild(par2);
+  article.appendChild(par3);
 
   return article;
 }
