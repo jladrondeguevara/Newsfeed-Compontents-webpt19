@@ -150,6 +150,12 @@ const articleMaker = (titleIn, dateIn, par1In, par2In, par3In) => {
 }
 
 
-const articleComponent = articleMaker("title", "date", "somethin", "is", "happening");
+// const articleComponent = articleMaker("title", "date", "somethin", "is", "happening");
+// const articles = document.querySelector(".articles");
+// articles.appendChild(articleComponent);
+
+
 const articles = document.querySelector(".articles");
-articles.appendChild(articleComponent);
+data.forEach(ar => {
+  articles.appendChild(articleMaker(ar.title, ar.date, ar.firstParagraph, ar.secondParagraph, ar.thirdParagraph));
+})
