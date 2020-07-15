@@ -126,9 +126,11 @@ const articleMaker = (titleIn, dateIn, par1In, par2In, par3In) => {
   par1.textContent = par1In;
   par2.textContent = par2In;
   par3.textContent = par3In;
+  expandBtn.textContent = '+';
 
   article.classList.add('article');
   date.classList.add('date');
+  expandBtn.classList.add('expandButton');
 
   article.appendChild(title);
   article.appendChild(date);
@@ -141,6 +143,7 @@ const articleMaker = (titleIn, dateIn, par1In, par2In, par3In) => {
 
   expandBtn.addEventListener('click', () => {
     console.log("button clicked");
+    article.classList.toggle("article-open");
   })
 
   return article;
