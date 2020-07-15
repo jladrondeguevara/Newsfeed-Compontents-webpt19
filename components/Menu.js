@@ -33,8 +33,21 @@ let menuItems = [
 */
 
 
-const menuMaker = () => {
+const menuMaker = (item) => {
   const menu = document.createElement('div');
   const list = document.createElement('ul');
-  const item = document.createElement('il');
+  // const item = document.createElement('il');
+
+  menu.classList.add('menu');
+
+  menu.appendChild(list);
+
+  menuItems.forEach(data => {
+    const item = createElement('li');
+    item.textContent = data;
+    list.appendChild(item);
+  })
+
+  const menuBtn = document.querySelector('.menu-button');
+  return menu;
 }
