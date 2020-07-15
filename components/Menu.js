@@ -49,5 +49,9 @@ const menuMaker = (item) => {
   })
 
   const menuBtn = document.querySelector('.menu-button');
+  menuBtn.addEventListener('click', () =>{
+    menu.classList.toggle('menu--open');
+    console.log("menu open");
+  })
   return menu;
 }
